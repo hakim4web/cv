@@ -54,7 +54,7 @@ function send() {
             })
         }
     }
-    xh.open("POST", "http://localhost/mail/index.php", true);
+    xh.open("POST", "", true);
     xh.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xh.send(data);
 }
