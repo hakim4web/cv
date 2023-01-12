@@ -6,6 +6,10 @@ $(document).ready(function(){
     $('.home .talk').click(function(){
         $('.layer').fadeIn('slow')
     })
+    
+    $('.home .cv').click(function(){
+        window.open("https://github.com/hakim4web/cv/raw/main/pdf/cv_2023.pdf")
+    })
 
     $('.close').click(function(){
         $('.layer').fadeOut('slow')
