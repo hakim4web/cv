@@ -1,0 +1,30 @@
+.preloader {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: white;
+    z-index: 10000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader {
+    width: 50px;
+    border-radius: 50%;
+    box-shadow: 0 0 20px -5px black;
+    animation: loading 2s linear 1 forwards;
+}
+
+@keyframes loading {
+    0% {
+        box-shadow: 0 0 20px -5px black;
+    }
+
+    100% {
+        box-shadow: 0 0 20px 100vh black;
+        transform: scale(2) rotateZ(360deg);
+    }
+}

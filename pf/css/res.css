@@ -1,0 +1,126 @@
+@media (max-width:999px) {
+    html {
+        font-size: 7px;
+    }
+
+    .template {
+        width: 100vw;
+    }
+
+    .template .sidebar {
+        width: 100%;
+        height: 10%;
+        flex-direction: row;
+    }
+
+    .template .sidebar .logo {
+        width: 6rem;
+        margin: 0 25px;
+    }
+
+    .template .sidebar .sm-links {
+        flex-direction: row;
+        justify-content:flex-start;
+        width: 35%;
+        height: 100%;
+    }
+
+    .template .sidebar .sm-links img {
+        height: 4rem;
+        margin-bottom: 0;
+        margin-right: 2rem;
+    }
+
+    .last::after {
+        content: "";
+        position: absolute;
+        left: 150%;
+        top: 50%;
+        width: 600px;
+        height: 2px;
+        background-color: white;
+    }
+
+    .sections {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 5vw;
+    }
+
+    .home button {
+     font-size: 3rem;
+    }
+
+    .layer .cbox {
+        width: 90vw;
+        min-height: 90vh;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .layer .cbox .clogo {
+        width: 6rem;
+        
+    }
+
+    .layer .cbox .border {
+        width: 90%;
+        height: 3px;
+    }
+
+    .layer .cbox .close {
+        font-size: 6rem;
+    }
+
+    .layer .cbox .left {
+        padding: 5rem;
+        width: 100vw;
+    }
+
+    .layer .cbox .left .em {
+        padding: 2rem;
+        font-size: 3rem;
+        margin-bottom: 4rem;
+    }
+
+    .layer .cbox .left a {
+        padding: 2rem;
+        font-size: 3rem;    
+    }
+
+    .layer .cbox .left a img {
+        width: 6rem;
+    }
+
+    .layer .cbox .right {
+        width: 100vw;
+    }
+
+    .layer .cbox .right input {
+        padding: 2rem;
+        margin: 2rem;
+        font-size: 3rem;
+        width: 80%;
+    }
+
+    .layer .cbox .right textarea {
+        padding: 2rem;
+        width: 80%;
+        height: 30rem;
+        max-height: none;
+        max-width: none;
+        min-width: none;
+        min-height: none;
+        font-size: 2.5rem;
+    }
+
+    .layer .cbox .right button {
+        padding: 1.8rem;
+        margin: 1rem;
+        font-size: 3rem;
+        width: 16rem;
+    }
+    
+}

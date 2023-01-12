@@ -1,0 +1,321 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 10px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    background-color: black;
+}
+
+.template {
+    position: absolute;
+    width: 90vw;
+    height: 100vh;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.template .sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 10%;
+    height: 100%;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.template .sidebar .logo {
+    width: 6rem;
+    margin: 25px 0;
+    border-radius: 50%;
+    animation: logo 2s ease-in-out infinite;
+}
+
+.template .sidebar .sm-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 35%;
+}
+
+.template .sidebar .sm-links img {
+    height: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.template .sidebar .sm-links img:hover {
+    animation: floaticon 600ms ease-out infinite;
+}
+
+.last {
+    position: relative;
+}
+
+.last::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 120%;
+    width: 2px;
+    height: 300px;
+    background-color: white;
+}
+
+.sections {
+    position: absolute;
+    left: 10%;
+    width: 90%;
+    height: 100%
+}
+
+section {
+    min-height: 100%;
+}
+
+.home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.home .content {
+    width: fit-content;
+}
+
+.home h3 {
+    font-size: 4rem;
+    color: white;
+    font-weight: lighter;
+    margin: 0 auto;
+}
+
+.home h1 {
+    font-size: 12rem;
+    color: white;
+    position: relative;
+}
+
+.home h2 {
+    font-size: 6rem;
+    color: white;
+    font-style: oblique;
+}
+
+.home span {
+    background-image: linear-gradient(-225deg,
+            gold 0%,
+            rgb(255, 255, 255) 70%);
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 2s linear infinite;
+    display: inline-block;
+}
+
+.home button {
+    padding: 10px;
+    margin-right: 10px;
+    background-color: black;
+    color: white;
+    outline: none;
+    border: 2px solid white;
+    font-size: 2rem;
+    margin-top: 2rem;
+    border-radius: 5px;
+    cursor: grab;
+    transition: all .5s ease;
+}
+
+.home button:hover {
+    background-color: white;
+    color: black;
+}
+
+.layer {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    background-color: black;
+    display: none;
+    z-index: 1000;
+}
+
+.layer .cbox {
+    width: 60rem;
+    height: 40rem;
+    background-color: white;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.layer .cbox .clogo {
+    width: 4rem;
+    position: absolute;
+    left:calc(50% - 2rem) ;
+    top: -4.5rem;
+    border-radius: 50%; 
+}
+
+.layer .cbox .close {
+    font-size: 3.5rem;
+    color: black;
+    position: absolute;
+    right: 0;
+    top: -15px;
+    cursor: pointer;
+}
+
+.layer .cbox .border {
+    width: 3px;
+    height: 90%;
+    background-color: black;
+}
+
+.layer .cbox .left {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    width: 25rem;
+}
+
+.layer .cbox .left .em {
+    padding: 1rem;
+    font-size: 1.5rem;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    margin-bottom: 2rem;
+    font-family: monospace;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.layer .cbox .left a {
+    padding: 1rem;
+    font-size: 2rem;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 900;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: .5s;
+    border: 2px solid transparent;
+}
+
+.layer .cbox .left a:hover {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+}
+
+.layer .cbox .left a img {
+    width: 3rem;
+}
+
+.layer .cbox .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 25rem;
+}
+
+.layer .cbox .right input {
+    padding: 1rem;
+    margin: 1rem;
+    font-size: 1.5rem;
+    text-align: center;
+    width: 20rem;
+    color: white;
+    background-color: black;
+    border: none;
+    border-radius: 5px;
+}
+
+.layer .cbox .right input::placeholder ,.layer .cbox .right textarea::placeholder {
+    color: white;
+}
+
+.layer .cbox .right textarea {
+    padding: 1rem;
+    width: 20rem;
+    height: 15rem;
+    max-height: 15rem;
+    max-width: 20rem;
+    min-width: 20rem;
+    min-height: 15rem;
+    text-align: center;
+    color: white;
+    background-color: black;
+    border: none;
+    border-radius: 5px;
+}
+
+.layer .cbox .right button {
+    padding: 0.8rem;
+    margin: 1rem;
+    font-size: 1.5rem;
+    text-align: center;
+    width: 8rem;
+    background-color: white;
+    color: black;
+    border: 3px solid black;
+    transition: .5s;
+    border-radius: 5px;
+}
+
+.layer .cbox .right button:hover {
+    background-color: black;
+    color: white;
+    border: 3px solid transparent;
+    cursor: pointer;
+}
+
+.layer .cbox .right .mini-loader {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-top: 1rem;
+    border-bottom: 4px solid black;
+    border-top: 4px solid black;
+    border-radius: 50%;
+    animation: minil 1.5s linear infinite;
+    display: none;
+}
+
+.res {
+    text-decoration: underline;
+    font-size: 2rem;
+    color: greenyellow;
+}
